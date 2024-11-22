@@ -1,0 +1,12 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\prett\\Desktop\\dev\\groupGenerator\\groupGenerator",
+            "binaryPath": "c:\\Users\\prett\\Desktop\\dev\\groupGenerator\\groupGenerator\\main.exe",
+            "binaryArgs": []
+        }
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
