@@ -77,7 +77,7 @@ isGenerated readGroupsFromFile(string filePath)
     if (!File.is_open())
     {
         cout << "The file could not be opened: " << filePath << endl;
-        return ERROR;
+        return N_GENERATED;
     }
 
     // get the data from file
