@@ -10,9 +10,11 @@ class Groups
         vector<Group> groups;
 
     public:
-        Groups(int groupSizes, Persons persons);
+        Groups();
 
         void createGroups(int groupSizes, Persons persons);
+
+        int setGroupSize(int peopleInList);
 
         void addGroup(Group group);
 

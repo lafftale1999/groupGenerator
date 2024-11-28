@@ -7,12 +7,20 @@
 
 #include "groups.h"
 
+typedef enum {
+    GENERATED,
+    N_GENERATED,
+    ERROR
+} isGenerated;
+
 std::string readNamesFromFile(string filePath);
+
+void writeGroupsToFiles(Groups groups, string filePath);
+
+isGenerated readGroupsFromFile(string filePath);
 
 int generateRandomNumber(int max);
 
-void writeNameToFiles(Groups groups, string filePath);
-
-int setGroupSize(int peopleInList);
+int printGroupsFromFile(string filePath);
 
 #endif

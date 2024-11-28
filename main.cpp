@@ -1,22 +1,29 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "include/persons.h"
 #include "include/groups.h"
 #include "include/utils.h"
 
 using namespace std;
 
-string readNamesFromFile();
-
 int main()
 {
-    // creates a list of persons
-    Persons persons = Persons(readNamesFromFile("data/names.txt"));
+    isGenerated isGenerated = readGroupsFromFile("data/groups.txt");
 
-    // create a list of groups based on the assigned size and list of persons
-    Groups groups = Groups(setGroupSize(persons.getList().size()), persons);
+    switch(isGenerated)
+    {
+        case N_GENERATED:{
+            Groups groups = Groups();
+            writeGroupsToFiles(groups, "data/groups.txt");
+            break;
+        }
+            
+        case GENERATED:
+            printGroupsFromFile("data/groups.txt");
+            break;
 
-    // save group to file
-    writeNameToFiles(groups, "data/groups.txt");
+        default:
+            cout << "Something went wrong" << endl;
+    }
+    
 }

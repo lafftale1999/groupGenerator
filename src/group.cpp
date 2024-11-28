@@ -1,11 +1,9 @@
 #include "../include/group.h"
 
+// contructor
 Group::Group(vector<Person> persons)
 {
-    for (Person person : persons)
-    {
-        addMember(person);
-    }
+    for (Person person : persons) addMember(person);
 }
 
 void Group::addMember(Person person)

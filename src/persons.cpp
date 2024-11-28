@@ -3,28 +3,33 @@
 
 
 Persons::Persons(string stringOfNames)
-{
+{   
+    // create a list of names
     vector<string> names = generateNames(stringOfNames);
 
-    for (string name : names)
-    {
-        addPerson(Person(name));
-    }
+    // create a list of person 
+    for (string name : names) addPerson(Person(name));
 }
 
 vector<string> Persons::generateNames(string stringOfNames)
 {
+    // vector to store all names in
     vector<string> listOfNames;
 
+    // a temporary string to store the current name in
     string temp;
 
+    // for loop to loop through the unformatted string
     for (int i = 0; i < stringOfNames.length(); i++)
-    {
+    {   
+        // if the character is a letter
         if (stringOfNames[i] != ',')
         {
+            // add to string
             temp.push_back(stringOfNames[i]);
         }
-
+        
+        // if it's a ',' add to list and reset tempstring
         else 
         {
             listOfNames.push_back(temp);
@@ -32,6 +37,7 @@ vector<string> Persons::generateNames(string stringOfNames)
         }
     }
 
+    // return list
     return listOfNames;
 }
 

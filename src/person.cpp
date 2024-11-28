@@ -3,8 +3,9 @@
 
 using namespace std;
 
+// constructor
 Person::Person(string n)
-{
+{   
     Person::setName(n);
 }
 
